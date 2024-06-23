@@ -1,0 +1,36 @@
+let age = 1;
+let name = "sledzscript";
+let also_name = 'sledzscript';
+
+let array = [1, 2, 3, 4, 5];
+
+let map = { "key": "value", "anotherKey": "anotherValue" };
+let map_two = { key: 'value', anotherKey: 'anotherValue' };
+let map_three = { key: array };
+
+
+let numberOne = array[0];
+let something = map['anotherKey'];
+
+let addNumbers = fn(a, b) { return a + b };
+let addNumbersTwo = { a, b -> a + b  };
+let result = addNumbers(2, 2);
+
+let fibonacci = fn (n) {
+    if (n == 0) {
+        return 0;
+    } else {
+        if (n == 1) {
+            return 1;
+        } else {
+            fibonacci(n - 1) + fibonnaci(n - 2);
+        }
+    }
+}
+
+let doubleIt = fn(supplier, x) {
+    return supplier(supplier(x));
+};
+
+let doubled = doubleIt({ x -> x + 2 }, 3);
+
